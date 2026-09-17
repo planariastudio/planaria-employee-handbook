@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Planaria Studio employee handbook: hours, attendance, time off, pay, conduct and leaving.">
+<meta name="robots" content="noindex">
+<title>Planaria Employee Handbook</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+<style>html,body{margin:0;padding:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Planaria Employee Handbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@600;700;800&family=Public+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
+
+<style>
+:root{
+  --ground:#FAFAF7; --surface:#FFFFFF; --surface-2:#F4F4F1;
+  --ink:#000000; --ink-2:#2E2E2E; --muted:#6B6B68;
+  --rule:#E4E4DF; --rule-2:#EFEFEA;
+  --app-bg:#1C1C1C; --app-ink:#EDEDEA; --app-rule:#343434; --app-muted:#8E8E8A; --app-hover:#272727;
+  --ring:#000000; --acc:#000000; --neon:#9DFF00;
+  --s-todo:#28AEF0; --s-editing:#43C464; --s-internal:#FF841F; --s-final:#7F5AF2;
+  --s-creview:#DE35C1; --s-crevision:#FF6157; --s-done:#7C848F;
+  --ok:#1E874B; --warn:#B8571A; --stop:#C0342B;
+  --mark:#FFC93C; --mark-ink:#6B4A00;
+  --maxw:74ch;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#151515; --surface:#212121; --surface-2:#1C1C1C;
+    --ink:#F4F4F2; --ink-2:#C9C9C6; --muted:#8E8E8A;
+    --rule:#343434; --rule-2:#282828;
+    --app-bg:#0E0E0E; --app-ink:#E6E6E3; --app-rule:#2C2C2C; --app-muted:#8A8A86; --app-hover:#1A1A1A;
+    --ring:#9DFF00; --acc:#9DFF00; --neon:#9DFF00; --ok:#4FC183; --warn:#E9974A; --stop:#F0736A;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#151515; --surface:#212121; --surface-2:#1C1C1C;
+  --ink:#F4F4F2; --ink-2:#C9C9C6; --muted:#8E8E8A;
+  --rule:#343434; --rule-2:#282828;
+  --app-bg:#0E0E0E; --app-ink:#E6E6E3; --app-rule:#2C2C2C; --app-muted:#8A8A86; --app-hover:#1A1A1A;
+  --ring:#9DFF00; --acc:#9DFF00; --neon:#9DFF00; --ok:#4FC183; --warn:#E9974A; --stop:#F0736A;
+}
+
+*{box-sizing:border-box}
+a{color:var(--ink);text-underline-offset:3px;text-decoration-thickness:1.5px;text-decoration-color:var(--muted)}
+a:hover{text-decoration-color:var(--ink);background:var(--card-2)}
+body{background:var(--ground);background-image:radial-gradient(120% 90% at 50% 0%,rgba(255,255,255,.035),transparent 60%);color:var(--ink);font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:"Asta Sans",system-ui,sans-serif;letter-spacing:-0.021em;text-wrap:balance;margin:0}
+code,.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}
+
+.topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--ground) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.topbar-in{max-width:1180px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:9px;font-family:"Asta Sans";font-weight:700;font-size:14px}
+.brand-mark{display:grid;place-items:center;flex:0 0 auto;color:var(--ink)}
+.brand-mark svg{width:19px;height:auto;display:block;fill:currentColor}
+.aud{margin-left:auto;font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);border-radius:999px;padding:4px 11px}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px 90px;display:grid;grid-template-columns:210px minmax(0,1fr);gap:44px}
+@media (max-width:900px){.wrap{grid-template-columns:1fr;gap:0}}
+
+.sidenav{position:sticky;top:64px;align-self:start;padding-top:40px;font-size:13.5px}
+@media (max-width:900px){.sidenav{position:static;padding:20px 0 0;border-bottom:1px solid var(--rule);margin-bottom:8px}}
+.sidenav .lbl{font-family:"JetBrains Mono";font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.sidenav ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+@media (max-width:900px){.sidenav ol{flex-direction:row;flex-wrap:wrap;gap:6px}}
+.sidenav a{display:block;color:var(--ink-2);text-decoration:none;padding:6px 10px;border-radius:7px}
+@media (max-width:900px){.sidenav a{border:1px solid var(--rule);font-size:12.5px;padding:4px 9px}}
+.sidenav a:hover{background:var(--surface);color:var(--ink)}
+.sidenav a:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+
+main{padding-top:40px;min-width:0}
+.eyebrow{font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+h1{font-size:clamp(29px,5vw,42px);line-height:1.08;font-weight:700;margin-bottom:14px}
+.standfirst{font-size:18px;color:var(--ink-2);max-width:58ch;margin:0 0 28px}
+
+.track-wrap{margin:0 0 40px}
+.track-cap{font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.track{display:flex;gap:3px;overflow-x:auto;background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:12px}
+.clip{flex:0 0 auto;border-radius:6px;padding:9px 12px 10px;min-width:104px;border:1px solid var(--rule-2);background:var(--surface-2);position:relative}
+.clip::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:3px 0 0 3px;background:var(--c)}
+.clip .n{font-family:"JetBrains Mono";font-size:9.5px;color:var(--muted);display:block;margin-bottom:3px}
+.clip .t{font-family:"Asta Sans";font-weight:600;font-size:11.5px;line-height:1.25;display:block}
+.clip .who{font-size:10.5px;color:var(--muted);display:block;margin-top:4px}
+.clip.you{background:color-mix(in srgb,var(--c) 13%,var(--surface));border-color:color-mix(in srgb,var(--c) 40%,var(--rule))}
+
+section{margin:0 0 50px;scroll-margin-top:74px}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin:0 0 18px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+.sec-num{font-family:"JetBrains Mono";font-size:11px;font-weight:700;color:var(--muted)}
+h2{font-size:25px;font-weight:700}
+p{margin:0 0 13px;max-width:var(--maxw)}
+ul,ol{margin:0 0 14px;padding-left:20px;max-width:var(--maxw)}
+li{margin-bottom:6px}
+strong{font-weight:600;color:var(--ink)}
+
+/* step */
+.step{margin:0 0 34px;padding-left:0}
+.step-h{display:flex;align-items:center;gap:12px;margin:0 0 12px}
+.step-n{font-family:"JetBrains Mono";font-size:12px;font-weight:700;width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:var(--ink);color:var(--ground);flex:0 0 auto}
+.step-h h3{font-size:18px;font-weight:600;margin:0}
+.step-body>:last-child{margin-bottom:0}
+
+.f{font-family:"JetBrains Mono";font-size:.86em;font-weight:500;background:var(--surface);border:1px solid var(--rule);border-radius:5px;padding:1.5px 6px;white-space:nowrap}
+.st{font-family:"JetBrains Mono";font-size:.78em;font-weight:700;letter-spacing:.04em;border-radius:4px;padding:2.5px 7px;white-space:nowrap;color:#fff;background:var(--c,#7C848F)}
+
+.note{border-left:3px solid var(--b,var(--rule));background:var(--surface);border-radius:0 10px 10px 0;padding:14px 17px;margin:0 0 18px;max-width:var(--maxw)}
+.note .lab{font-family:"JetBrains Mono";font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--b,var(--muted));font-weight:700;margin:0 0 5px;display:block}
+.note p:last-child{margin-bottom:0}
+.note.do{--b:var(--ok)} .note.dont{--b:var(--stop)} .note.watch{--b:var(--warn)}
+
+/* ---- screens ---- */
+figure{margin:0 0 16px;max-width:var(--maxw)}
+figcaption{font-size:12.8px;color:var(--muted);margin-top:8px;line-height:1.5}
+.shot{background:var(--app-bg);border:1px solid var(--app-rule);border-radius:11px;overflow:hidden;color:var(--app-ink);font-size:13.5px}
+.shot-bar{display:flex;align-items:center;gap:7px;padding:8px 13px;border-bottom:1px solid var(--app-rule);font-family:"JetBrains Mono";font-size:10.5px;color:var(--app-muted);letter-spacing:.04em}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--app-rule)}
+.shot-body{padding:13px 14px}
+.shot-split{display:grid;grid-template-columns:150px minmax(0,1fr)}
+@media(max-width:560px){.shot-split{grid-template-columns:1fr}}
+.shot-side{border-right:1px solid var(--app-rule);padding:11px 10px}
+@media(max-width:560px){.shot-side{border-right:0;border-bottom:1px solid var(--app-rule)}}
+
+.clickpin{margin-left:auto;font-family:"JetBrains Mono";font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mark-ink);background:var(--mark);border-radius:4px;padding:2px 7px;white-space:nowrap}
+.mk{background:color-mix(in srgb,var(--mark) 17%,transparent);outline:2px solid var(--mark);outline-offset:-2px;border-radius:7px}
+
+.navlab{font-family:"JetBrains Mono";font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--app-muted);margin:0 0 7px;padding:0 8px}
+.navitem{display:flex;align-items:center;gap:8px;padding:7px 9px;border-radius:7px;font-size:13px;margin-bottom:2px}
+.navitem .gi{width:13px;height:13px;border-radius:3px;border:1.5px solid var(--app-muted);flex:0 0 auto}
+
+.tabs{display:flex;gap:2px;overflow-x:auto;padding:3px 0}
+.tab{padding:7px 11px;border-radius:7px;font-size:12.8px;white-space:nowrap;color:var(--app-muted);display:flex;align-items:center;gap:7px}
+.tab.on{color:var(--app-ink);font-weight:600}
+
+.rowset{display:flex;flex-direction:column;gap:1px}
+.row{display:grid;grid-template-columns:130px minmax(0,1fr);gap:10px;padding:8px 10px;border-radius:7px;align-items:center}
+@media(max-width:520px){.row{grid-template-columns:110px minmax(0,1fr)}}
+.row .k{color:var(--app-muted);font-size:12.4px}
+.row .v{font-weight:500;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+
+.field{border-bottom:1px solid var(--app-rule);padding:12px 10px}
+.field:last-child{border-bottom:0}
+.field .fl{font-weight:600;font-size:13.4px;margin:0 0 3px;display:flex;align-items:center;gap:8px}
+.field .fh{color:var(--app-muted);font-size:12.2px;line-height:1.5;margin:0 0 8px}
+.inputbox{border:1px solid var(--app-rule);border-radius:7px;padding:8px 11px;color:var(--app-muted);font-size:12.4px;background:color-mix(in srgb,#000 14%,transparent)}
+.inputbox.filled{color:var(--app-ink)}
+
+.picker{display:flex;flex-direction:column;gap:2px}
+.opt{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;font-size:12.8px}
+.opt .sw{width:9px;height:9px;border-radius:2px;background:var(--c);flex:0 0 auto}
+.opt.dim{opacity:.4}
+
+.msg{background:var(--app-bg);border:1px solid var(--app-rule);border-radius:11px;padding:16px 17px;color:var(--app-ink)}
+.msg .h{font-family:"Asta Sans";font-weight:600;font-size:14.5px;margin:0 0 9px}
+.msg p{margin:0 0 9px;font-size:13.6px;line-height:1.58;color:var(--app-ink);max-width:none}
+.msg p:last-child{margin-bottom:0}
+.msg .b{font-weight:700}
+.msg .lk{color:#7FC4F5;text-decoration:underline;text-underline-offset:2px}
+
+.subs{display:flex;flex-direction:column}
+.sub{display:flex;align-items:center;gap:10px;padding:9px 10px;border-bottom:1px solid var(--app-rule);font-size:12.9px;border-radius:6px}
+.sub:last-child{border-bottom:0}
+.sub .ic{width:13px;height:13px;border-radius:3px;border:1.5px solid var(--app-muted);flex:0 0 auto}
+.sub .ic.done{background:var(--app-muted);border-color:var(--app-muted)}
+.sub .tag{margin-left:auto;font-family:"JetBrains Mono";font-size:9.5px;color:var(--app-muted)}
+.sub.faded{opacity:.5}
+
+.btn{display:inline-block;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:600;background:#2F6FED;color:#fff}
+
+.tbl-scroll{overflow-x:auto;margin:0 0 20px;max-width:var(--maxw);border:1px solid var(--rule);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14.2px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--rule-2);vertical-align:top}
+th{font-family:"JetBrains Mono";font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+
+.hr{height:1px;background:var(--rule);border:0;margin:40px 0}
+footer{max-width:var(--maxw);color:var(--muted);font-size:13.4px;padding-top:8px}
+@media print{.sidenav,.topbar{display:none}.wrap{grid-template-columns:1fr}}
+.chg{background:color-mix(in srgb,var(--mark) 20%,transparent);border-bottom:1.5px solid var(--mark);border-radius:3px;padding:0 3px}
+h3{font-size:17.5px;font-weight:600;margin:26px 0 10px}
+.step-h h3{margin:0}
+section h3:first-of-type{margin-top:4px}
+em{font-style:italic;color:var(--ink-2)}
+</style>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <span class="brand"><span class="brand-mark"><svg viewBox="0 0 497 662" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="83" y="0" width="332" height="83" rx="41.5"/><rect x="0" y="83" width="83" height="497" rx="41.5"/><rect x="415" y="83" width="82" height="247" rx="41"/><rect x="248" y="330" width="167" height="83" rx="41.5"/><rect x="248" y="330" width="83" height="250" rx="41.5"/><rect x="83" y="580" width="165" height="82" rx="41"/></svg></span> Planaria Studio</span>
+    <span class="aud">Company policy</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+<nav class="sidenav">
+  <p class="lbl">Contents</p>
+  <ol>
+    <li><a href="#guides">The guides</a></li>
+    <li><a href="#welcome">1 · Welcome</a></li>
+    <li><a href="#values">2 · Mission &amp; values</a></li>
+    <li><a href="#story">3 · Company story</a></li>
+    <li><a href="#scope">4 · What this is &amp; isn't</a></li>
+    <li><a href="#employment">5 · Employment policy</a></li>
+    <li><a href="#working">6 · Working here</a></li>
+    <li><a href="#timeoff">7 · Time off &amp; leave</a></li>
+    <li><a href="#pay">8 · Pay &amp; performance</a></li>
+    <li><a href="#conduct">9 · Conduct &amp; discipline</a></li>
+    <li><a href="#leaving">10 · Leaving</a></li>
+    <li><a href="#legal">Legal reference</a></li>
+    <li><a href="#changes">What changed</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<p class="eyebrow">Employee handbook &amp; company policy · Version September 2026</p>
+<h1>Planaria Studio Employee Handbook</h1>
+<p class="standfirst">How we work, what we expect, and what you can expect from us.</p>
+
+<hr class="hr">
+
+<section id="guides">
+  <div class="sec-head"><span class="sec-num">&#9679;</span><h2>The guides</h2></div>
+  <p>This handbook states the policy. Each guide below shows how one part of it is actually carried out, screen by screen. Where a guide and this handbook ever disagree, <strong>the handbook is right</strong> and the guide needs fixing.</p>
+
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>Guide</th><th>What it covers</th><th>Who needs it</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong><a href="https://planariastudio.github.io/attendance-policy/">Attendance &amp; Compensation Policy</a></strong></td>
+          <td>Attendance, hours, leave and pay, clause by clause, with the GoodDay steps attached. Carries out sections 6, 7 and 8 below</td>
+          <td>Everyone</td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://planariastudio.github.io/planaria-goodday-editor-guide/">Editor workflow in GoodDay</a></strong></td>
+          <td>One job from the moment it lands on you to the moment it is approved</td>
+          <td>Editors</td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://planariastudio.github.io/planaria-goodday-leadership-guide/">Leadership workflow in GoodDay</a></strong></td>
+          <td>Opening a job, the three dates, the three review gates, and who gets the next job</td>
+          <td>SPVs and Julius</td>
+        </tr>
+        <tr>
+          <td><strong><a href="https://planariastudio.github.io/planaria-filing-guide/">Filing system guide</a></strong></td>
+          <td>Where files live on Drive, how folders are named, what goes where</td>
+          <td>Everyone who touches footage</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <p>Two more are coming: <strong>onboarding</strong>, and the <strong>KPI, peer appraisal and PIP guide</strong>, which is waiting on its system being built in GoodDay.</p>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ===== 1 ===== -->
+<section id="welcome">
+  <div class="sec-head"><span class="sec-num">01</span><h2>Welcome &amp; introduction</h2></div>
+
+  <p>Welcome to Planaria Studio. We are glad you are here.</p>
+
+  <p>Planaria started as an idea shared between a few creatives who believed Indonesian talent belonged alongside the best in the world. Late nights and modest gigs grew into a team of skilled, dependable people doing world-class post-production for global clients.</p>
+
+  <p>This handbook sets out how we work, what we expect, and what you can expect from us. Our policies rest on trust, mutual respect, and the belief that a sustainable creative career is possible here.</p>
+
+  <p>We're building something meaningful here, and we're glad to have you as part of it.</p>
+
+  <p><em>The Leadership Team, Planaria Studio</em></p>
+</section>
+
+<!-- ===== 2 ===== -->
+<section id="values">
+  <div class="sec-head"><span class="sec-num">02</span><h2>Company mission, vision &amp; values</h2></div>
+
+  <p>Our mission is to deliver the standard of post-production expected from leading studios in the U.S. and Europe, from Indonesia.</p>
+
+  <p>World-class output should not carry a prohibitive price tag. Affordable, high-quality work for global clients creates fairly paid opportunities for Indonesian creatives.</p>
+
+  <p>Our values:</p>
+  <ul>
+    <li><strong>Quality</strong>. We hold ourselves to an international standard, every time.</li>
+    <li><strong>Integrity</strong>. We act with honesty toward our clients, our partners, and each other.</li>
+    <li><strong>Reliability</strong>. We do what we say we will do, and we do it well.</li>
+    <li><strong>Sustainability</strong>. We build careers, not just projects.</li>
+    <li><strong>Respect</strong>. We treat everyone, teammates, clients and partners alike, with professionalism and care.</li>
+  </ul>
+</section>
+
+<!-- ===== 3 ===== -->
+<section id="story">
+  <div class="sec-head"><span class="sec-num">03</span><h2>Company story</h2></div>
+
+  <p>Planaria Studio started very small. In 2022 we were a couple of editors splitting modest jobs on educational content, working the business out as we went.</p>
+
+  <p>What began as a side project quickly became something more serious. Deadlines grew, projects became more complex, and demand for our work steadily increased. By 2026, we had grown into a 13-person studio with a structured workflow, a defined creative process, and a clear shared vision.</p>
+
+  <p>We're based in Indonesia, but our clients and our mindset are global. Through all the growth and challenges, one principle has remained constant:</p>
+
+  <div class="note">
+    <p><em>"We believe in doing great work with good people, and building something sustainable together."</em></p>
+  </div>
+</section>
+
+<!-- ===== 4 ===== -->
+<section id="scope">
+  <div class="sec-head"><span class="sec-num">04</span><h2>What this handbook is &amp; isn't</h2></div>
+
+  <p>This is your reference for how the studio operates: values, policies, expectations, and the support available to you.</p>
+
+  <p>That said, it is important to understand what this handbook is not:</p>
+
+  <ul>
+    <li><strong>It is not a contract.</strong> Your individual employment contract is the binding document governing your specific terms. Where this handbook and your contract differ, your contract takes precedence.</li>
+    <li><strong>It is not a rigid rulebook.</strong> We operate in a fast-moving, creative industry. Sometimes we adapt faster than this document can be updated.</li>
+    <li><strong>It is not a micromanagement tool.</strong> We trust you. The policies here exist to protect the team and create the conditions for everyone to do their best work.</li>
+  </ul>
+
+  <p>If anything here is unclear, outdated, or does not match how we actually operate, raise it with management.</p>
+</section>
+
+<!-- ===== 5 ===== -->
+<section id="employment">
+  <div class="sec-head"><span class="sec-num">05</span><h2>Employment policy</h2></div>
+
+  <h3>Equal opportunity employment</h3>
+  <p>Planaria Studio is an equal opportunity employer. Hiring, pay, promotion and every other employment decision rests on skills, experience and professional conduct. Not race, religion, gender, sexual orientation, disability or any other personal characteristic.</p>
+  <p>We are committed to a fair and inclusive workplace where everyone is respected and supported.</p>
+
+  <h3>Anti-harassment &amp; discrimination policy</h3>
+  <p>Every member of the team deserves to feel safe and respected at work, without exception.</p>
+  <p>We do not tolerate harassment, bullying or discrimination in any form, verbal, physical, visual or digital. That includes inappropriate remarks, unwanted advances, offensive commentary, and anything that causes discomfort or exclusion.</p>
+  <p>Report it immediately to a team lead or to management. Every report is taken seriously and handled confidentially. Retaliation against anyone raising a concern in good faith is prohibited.</p>
+
+  <h3>Code of conduct &amp; ethics</h3>
+  <p>Professional conduct is the foundation of everything we do. As a member of the team, we expect you to:</p>
+  <ul>
+    <li>Communicate honestly, clearly, and professionally</li>
+    <li>Meet your deadlines and take full ownership of your work</li>
+    <li>Treat teammates, clients, and partners with respect</li>
+    <li>Represent the studio in a manner consistent with our values</li>
+    <li>Keep personal conflicts separate from professional responsibilities</li>
+  </ul>
+  <p>Act with integrity in every interaction, whether or not anyone is watching.</p>
+
+  <h3>Confidentiality &amp; non-disclosure</h3>
+  <p>Clients share footage, scripts, brand assets, creative direction and sensitive information with us. Protecting it is our responsibility.</p>
+  <p>You agree not to share, repurpose or disclose confidential materials or communications, during your employment or after it ends. That covers project files, client assets, internal workflows, financial information and any other proprietary studio content.</p>
+
+  <div class="note dont">
+    <span class="lab">When in doubt</span>
+    <p>Assume it is confidential, and ask before sharing.</p>
+  </div>
+</section>
+
+<!-- ===== 6 ===== -->
+<section id="working">
+  <div class="sec-head"><span class="sec-num">06</span><h2>Working at Planaria Studio</h2></div>
+
+  <h3>6.1 Work environment &amp; etiquette</h3>
+  <p>We are a creative, fast-paced team. We work best when the environment is focused, supportive, and professional.</p>
+  <p>We expect everyone to:</p>
+  <ul>
+    <li>Communicate clearly and respond in a timely manner</li>
+    <li>Be reliable. Others depend on your contribution</li>
+    <li>Keep your workspace, physical or digital, organized</li>
+    <li>Maintain professionalism, even under pressure</li>
+    <li>Ask for clarification when you need it. There is no shame in it</li>
+  </ul>
+  <p>We do not operate through rigid hierarchy, but we do expect consistent professionalism from everyone.</p>
+
+  <hr class="hr">
+
+  <h3>6.2 Logging attendance</h3>
+  <p>Every team member is required to log their attendance daily <span class="chg">through GoodDay</span>.</p>
+
+  <p><strong>Where to log:</strong> <span class="chg">All attendance entries go through <span class="f">Staff Hub → Attendance</span>, on one of two tabs. On a working day you fill in <span class="f">Daily Standup</span>. On a day you are not working you fill in <span class="f">Time Off Request</span> instead, and never both.</span> These are the only accepted methods. Anything sent by chat, email or message will not be recorded.</p>
+
+  <p><strong>When to log:</strong> Fill in the standup every working day, without exception. On days off, submit a <span class="chg">Time Off Request</span> at least 2 working days in advance. This serves as a formal request to management. A notification will be sent confirming approval or rejection, along with the reason.</p>
+
+  <div class="note do">
+    <span class="lab">The step by step version</span>
+    <p>Every screen, with where to click, is in <a href="https://planariastudio.github.io/attendance-policy/"><strong>Attendance &amp; Compensation Policy</strong></a>. What follows here is the rule.</p>
+  </div>
+
+  <p><strong>How to fill in the standup, each field explained:</strong></p>
+
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>Field</th><th>What goes in it</th></tr></thead>
+      <tbody>
+        <tr><td><span class="f">Your name</span></td><td>Pick yourself from the list. This is what files the day against you, so choose your own name even if you are on somebody else's screen</td></tr>
+        <tr><td><span class="f">Which job?</span></td><td>The job name exactly as it appears on the Production board. It becomes the title of the record, so it is what makes the day findable later</td></tr>
+        <tr><td><span class="f">Other work today</span></td><td>Optional. Any other job you touched today, one per line. Hold shift and press enter to start a new line</td></tr>
+        <tr><td><span class="f">What are you working on?</span></td><td>The stage you will spend most of today on. Pick it from the list</td></tr>
+        <tr><td><span class="f">Blocked by anything?</span></td><td>Optional. Only if something outside your control is holding you up</td></tr>
+        <tr><td><span class="f">Which day is this for?</span></td><td>The day you are logging. One standup covers one day</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>Why it matters:</strong> Attendance data is used for three purposes: official presence records, workload visibility for your lead, and capacity planning across the team.</p>
+
+  <div class="note watch">
+    <span class="lab">One field is gone</span>
+    <p><span class="chg">The old <strong>Attendance &amp; Workload Status</strong> field (Heavy, Medium, Light, Standby, OFF) no longer exists.</span> Your lead now reads how loaded you are from the jobs on the board and from what you write in the standup, not from a rating you give yourself. Days off are handled by the Time Off Request tab instead of by an OFF status.</p>
+  </div>
+
+  <hr class="hr">
+
+  <h3>6.3 Monthly attendance cut-off</h3>
+  <p>Attendance runs on a fixed monthly cycle with a hard deadline.</p>
+  <p>Each attendance period runs from the <strong>26th of the previous month through the 25th of the current month</strong>. All entries and corrections must be finalized by the <strong>25th at 23:59 WIB</strong>.</p>
+
+  <div class="note dont">
+    <span class="lab">There is no catching up later</span>
+    <p>Incomplete records after cut-off will be treated as unrecorded. There is no mechanism for retroactive corrections. Any data not submitted by the 25th will not be processed.</p>
+  </div>
+
+  <p><strong>Self-check before the deadline:</strong> Before the 25th, verify that no dates are missing, all statuses are accurate, and notes are filled in with sufficient detail.</p>
+
+  <p><strong>How this ties to payroll:</strong> Salaries are processed at the end of each month based on the attendance data locked at cut-off. Your pay slip, including any attendance adjustments, is sent to your email.</p>
+
+  <hr class="hr">
+
+  <h3>6.4 Working hours &amp; overtime</h3>
+  <p>Planaria Studio operates on a flexible work arrangement. Output and deadlines take priority over fixed schedules.</p>
+
+  <p><strong>Standard working hours:</strong> The expected working arrangement averages 8 effective hours per day or 40 hours per week, excluding breaks. That follows Indonesian labour regulations (the Manpower Law (UU No. 13/2003), as amended) and is a reference point, not a rigid daily target.</p>
+
+  <p><strong>Standby availability:</strong> Because most of our clients are based overseas, team members must remain available and responsive during core collaboration windows. Standard standby hours are:</p>
+  <ul>
+    <li>9:00 AM – 3:00 PM (WIB)</li>
+    <li>6:00 PM – 10:00 PM (WIB)</li>
+  </ul>
+  <p>During these windows you are expected to be reachable, alert, and capable of responding to feedback or making quick revisions when required.</p>
+
+  <div class="note">
+    <p><strong>Note:</strong> Some roles operate under different standby schedules as specified in their individual contracts. Please refer to your contract for the hours applicable to your position.</p>
+  </div>
+
+  <p><strong>Overtime:</strong> Overtime work must be based on mutual agreement and is subject to applicable legal limits under Indonesian law. If your workload consistently exceeds reasonable limits, you are entitled to raise this formally. Submit supporting evidence to your lead and management: task logs, project timelines, or communication records. Overtime reporting serves as operational data to help the team rebalance workloads, adjust deadlines, or allocate additional resources.</p>
+
+  <div class="note">
+    <p><strong>Note:</strong> Statutory overtime entitlements for employees on permanent or fixed-term contracts are governed by Indonesian labour law and your individual contract. The studio's obligations in this regard are non-negotiable and will be honored in full.</p>
+  </div>
+
+  <hr class="hr">
+
+  <h3>6.5 Remote work policy</h3>
+  <p>Planaria Studio is a remote-first team. Whether you work from home, a coworking space, or elsewhere, the expectations remain the same: deliver quality work, communicate openly, and meet your deadlines.</p>
+  <p>For team calls: be on time, be in a quiet environment, and be fully present.</p>
+  <p>If we ever transition to a hybrid or in-office format, you will be given clear advance notice and support through the change.</p>
+
+  <hr class="hr">
+
+  <h3>6.6 Remote work setup requirements</h3>
+  <p>Working remotely means taking full ownership of your own setup. To perform at the level we expect, you should have:</p>
+  <ul>
+    <li>A stable, reliable internet connection</li>
+    <li>A quiet, distraction-free workspace</li>
+    <li>A functioning computer capable of handling our production workflow</li>
+    <li>Access to all required software and tools (licenses will be provided by the studio where applicable)</li>
+  </ul>
+  <p>If your setup becomes a barrier to your work, raise it with management. We want to help find a solution.</p>
+</section>
+
+<!-- ===== 7 ===== -->
+<section id="timeoff">
+  <div class="sec-head"><span class="sec-num">07</span><h2>Time off &amp; leave</h2></div>
+
+  <p>Planaria Studio operates across all seven days of the week. The following policies are designed to protect your rest, health, and legal entitlements while keeping the team functioning smoothly.</p>
+
+  <p><span class="chg">All time-off requests must be submitted through the <span class="f">Time Off Request</span> tab in <span class="f">Staff Hub → Attendance</span></span> at least 2 working days in advance, unless stated otherwise below.</p>
+
+  <div class="note do">
+    <span class="lab">The step by step version</span>
+    <p>How to actually file one, and what each answer means, is in <a href="https://planariastudio.github.io/attendance-policy/"><strong>Attendance &amp; Compensation Policy</strong></a>. This section is what you are entitled to.</p>
+  </div>
+
+  <hr class="hr">
+
+  <h3>7.1 Day off (monthly rest entitlement)</h3>
+  <p><strong>Sunday is a fixed day off for everyone.</strong> You do not request it and you do not log it.</p>
+  <p>Every employee receives <strong>8 days off per month</strong>. <span class="chg">Sundays count against that 8.</span> The remainder are yours to request. <span class="chg">No employee takes more than 9 days off in any one month.</span> This allocation is separate from your annual leave.</p>
+
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>Month with</th><th>Sundays, automatic</th><th>Left to request</th><th>Ceiling</th></tr></thead>
+      <tbody>
+        <tr><td>4 Sundays</td><td>4</td><td>4</td><td>9</td></tr>
+        <tr><td>5 Sundays</td><td>5</td><td>3</td><td>9</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>The ninth day sits above the normal 8 so a rolled-over day can still be used. It is a ceiling, not an entitlement.</p>
+
+  <p><strong>How to request the rest:</strong> <span class="chg">open the Time Off Request tab, choose <span class="f">Day off</span>, set the day. For several days in a row, set the first and the last. Give the reason in <span class="f">Anything Julius should know?</span>, the only place he can see one.</span> You get a notification with the answer and the reason.</p>
+
+  <p><strong>If called in on a day off:</strong> where the work runs past <strong>2 effective hours</strong>, you are entitled to either a replacement day at an agreed time, or monetary compensation as defined in your contract. This covers Sundays.</p>
+
+  <p><strong>Rollover, the N+2 window:</strong> unused days off do not expire at the end of the month. They carry forward on this schedule:</p>
+
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>Period</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Month N</strong></td><td>Days off earned but not taken</td></tr>
+        <tr><td><strong>Month N+1</strong></td><td>Still available as regular days off</td></tr>
+        <tr><td><strong>Month N+2</strong></td><td>Final window to take remaining days</td></tr>
+        <tr><td><strong>After N+2</strong></td><td>Automatically converted to monetary compensation and included in payroll</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <p><strong>Note:</strong> The monetary conversion rate for unused days off after the N+2 window is specified in your individual contract.</p>
+  </div>
+
+  <hr class="hr">
+
+  <h3>7.2 Annual leave, government-mandated</h3>
+  <p>In addition to monthly days off, all employees are entitled to government-mandated annual leave under Indonesian labour law (UU No. 13/2003, Article 79, as amended by UU No. 6/2023).</p>
+
+  <p><strong>Entitlement:</strong></p>
+  <ul>
+    <li>Employees who have completed 12 months of continuous service are entitled to a minimum of <strong>12 working days</strong> of paid annual leave per year</li>
+    <li>This entitlement accrues at 1 day per month of completed service</li>
+    <li>Employees with less than 12 months of service are not yet entitled to the full annual leave allocation; accrual begins from the first month of employment</li>
+  </ul>
+
+  <p><strong>How to request:</strong> <span class="chg">Submit through the Time Off Request tab</span> at least 2 working days in advance, following the same process as day-off requests.</p>
+
+  <div class="note watch">
+    <span class="lab">Paid leave is not automatic</span>
+    <p><span class="chg">A request only becomes paid leave when Julius marks it as <span class="st" style="--c:var(--s-done)">PAID LEAVE</span>, and payroll reads that. If you believe a day should be paid leave, say so in the request. Do not assume it.</span></p>
+  </div>
+
+  <p><strong>Consecutive day limit:</strong> Leave may be taken for up to <strong>4 consecutive days</strong> at a time. Following that, the employee is required to work at least 5 full working days before submitting another leave request.</p>
+
+  <div class="note dont">
+    <span class="lab">Annual leave cannot be cashed out</span>
+    <p>Paid annual leave cannot be cashed out under any circumstances. Monthly days off are compensated automatically after the N+2 window. Unused annual leave is not, and expires without conversion. This is consistent with current Indonesian labour regulations.</p>
+  </div>
+
+  <p><strong>Sick leave and annual leave:</strong> Absence due to illness or injury does not count against your annual leave balance, provided you notify your direct lead in a timely manner and provide supporting documentation as required. This is your right under Indonesian labour law.</p>
+
+  <div class="note">
+    <p><strong>Note:</strong> Your individual contract specifies the full breakdown of your leave entitlements. Please refer to your contract for complete details.</p>
+  </div>
+
+  <hr class="hr">
+
+  <h3>7.3 Unplanned absence &amp; sick leave</h3>
+  <p>In all cases of unplanned absence, you are expected to notify your direct lead (Supervisor) or management at the earliest opportunity, including in last-minute situations.</p>
+
+  <p><strong>Deduction order for personal absences:</strong> For unplanned absences outside of scheduled time off, available balances are deducted in the following order:</p>
+  <ol>
+    <li><strong>Paid annual leave</strong>, deducted first</li>
+    <li><strong>Monthly days off</strong>, deducted if annual leave is exhausted</li>
+    <li><strong>Unpaid leave</strong>, applied as a last resort if both balances are exhausted</li>
+  </ol>
+
+  <p><strong>Sick leave:</strong> Being sick will not affect your pay, as long as you notify your direct lead in a timely manner and provide supporting documentation as required by company policy. Sick leave does not reduce your annual leave or day-off balance. <span class="chg">File it the same morning on the Time Off Request tab, choose <span class="f">Sick</span>, and attach the doctor's note to the request if you have one.</span></p>
+
+  <p><strong>Emergency absence:</strong> In all emergency situations, notify your direct lead as soon as reasonably possible. Documentation may be required upon return.</p>
+
+  <p><strong>Extended absence (3+ consecutive working days):</strong> Absences exceeding 3 consecutive working days, or those arising from special circumstances, are handled on a case-by-case basis and require approval from both your direct lead (Supervisor) and management.</p>
+</section>
+
+<!-- ===== 8 ===== -->
+<section id="pay">
+  <div class="sec-head"><span class="sec-num">08</span><h2>Compensation &amp; performance</h2></div>
+
+  <h3>8.1 Payroll &amp; salary</h3>
+  <p>Salaries at Planaria Studio are set based on your role, scope of responsibilities, and contribution to the team. We aim to offer competitive rates reflective of the international standard of work we deliver.</p>
+  <p>Any change to your compensation, including promotions, raises and structural adjustments, is communicated in writing. We are transparent about pay. If you ever have questions about your salary or how it is structured, reach out to management directly.</p>
+
+  <hr class="hr">
+
+  <h3>8.2 Pay schedule &amp; salary restructuring</h3>
+  <p>All team members are paid on a monthly basis. Salaries are processed at the end of each month based on attendance data locked at the 25th cut-off. Your pay slip will be sent to your registered email.</p>
+  <p>Please ensure your banking details on file are accurate and up to date. If there is ever a delay or discrepancy, notify management immediately.</p>
+
+  <p><strong>Effective March 2026, salary restructuring:</strong> Two structural changes apply to all employees:</p>
+  <ol>
+    <li><strong>Income tax (income tax) withholding</strong> is applied in accordance with applicable Indonesian tax law. Under the average effective rate system effective since January 2024, monthly withholding is applied from January through November, with a full progressive reconciliation in December.</li>
+    <li><strong>Restructuring of salary components.</strong> The breakdown of each employee's compensation has been adjusted by role. A personalized breakdown with the full details of your updated compensation structure will be sent to your registered email. Please review and confirm receipt.</li>
+  </ol>
+  <p>If you have questions about your compensation structure, reach out to your direct lead or management.</p>
+
+  <hr class="hr">
+
+  <h3>8.3 Overtime compensation</h3>
+  <p>Planaria Studio operates on a flexible, output-based work model. We trust you to manage your time responsibly.</p>
+  <p>However, we recognize that certain projects will demand more than the standard workload. Under Indonesian labour law (UU No. 13/2003, Article 78), overtime work must be based on employee consent and is subject to legal limits. Statutory overtime entitlements for employees under formal employment agreements are defined in your individual contract and will be honored in full.</p>
+  <p>If your workload consistently exceeds reasonable limits, you are entitled to raise this formally by submitting supporting evidence to your lead and management. That triggers a review of workload, deadlines and resources. Not punishment.</p>
+  <p>We are committed to a sustainable working environment for everyone on the team.</p>
+
+  <hr class="hr">
+
+  <h3>8.4 Religious holiday allowance</h3>
+  <p>All employees at Planaria Studio are entitled to the religious holiday allowance as mandated under Government Regulation No. 36/2021 and Minister of Manpower Regulation No. 6/2016.</p>
+
+  <p><strong>Who is eligible:</strong> All employees who have completed at least 1 month of continuous service, whether you are on a permanent or a fixed-term contract.</p>
+
+  <p><strong>Calculation:</strong></p>
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>Length of service</th><th>What you receive</th></tr></thead>
+      <tbody>
+        <tr><td>12 or more months of continuous service</td><td>One full month's salary</td></tr>
+        <tr><td>Less than 12 months of continuous service</td><td>Prorated: (months of service ÷ 12) × one month's salary</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>Payment deadline:</strong> the holiday allowance must be paid no later than <strong>7 days before</strong> the employee's primary religious holiday. Payment is made in a single lump sum, installment payments are not permitted.</p>
+  <p>the holiday allowance is paid according to the employee's registered religion. Indonesia officially recognizes six religions (Islam, Protestantism, Catholicism, Hinduism, Buddhism, and Confucianism), each with its corresponding primary holiday.</p>
+  <p><strong>Tax treatment:</strong> the holiday allowance is subject to income tax income tax withholding under applicable Indonesian tax law. It is not subject to BPJS contributions.</p>
+
+  <div class="note watch">
+    <span class="lab">Late payment carries a statutory fine</span>
+    <p>A late holiday allowance payment is subject to a statutory fine of 5% of the total allowance owed, per Government Regulation No. 36/2021. Planaria Studio is committed to full and timely compliance.</p>
+  </div>
+
+  <hr class="hr">
+
+  <h3>8.5 Performance reviews &amp; feedback</h3>
+  <p>We run <strong>bi-annual performance reviews</strong> to:</p>
+  <ul>
+    <li>Check in on individual goals and progress</li>
+    <li>Provide structured, constructive feedback</li>
+    <li>Discuss what is working well and what needs improvement</li>
+    <li>Address compensation changes, promotions, or role adjustments</li>
+  </ul>
+  <p>Reviews are announced in advance and run both ways. Your view of how the company is operating carries the same weight.</p>
+  <p>Between formal reviews, you will receive informal feedback as projects conclude. We do not do surprises. Just consistent, open communication.</p>
+  <p>Formal warnings (SP1, SP2) issued during any period will be referenced in the relevant bi-annual review.</p>
+</section>
+
+<!-- ===== 9 ===== -->
+<section id="conduct">
+  <div class="sec-head"><span class="sec-num">09</span><h2>Conduct, disciplinary actions &amp; grievances</h2></div>
+
+  <h3>What constitutes misconduct</h3>
+  <p>We expect every team member to act with professionalism, honesty and respect, in how they work and how they treat others.</p>
+  <p>Misconduct includes, but is not limited to:</p>
+  <ul>
+    <li>Consistent failure to meet deadlines or deliver assigned work</li>
+    <li>Ignoring client or team communication without valid reason</li>
+    <li>Verbal abuse, harassment, or discriminatory behavior of any kind</li>
+    <li>Sexual harassment or any conduct of a sexual nature that causes discomfort, harm, or a hostile work environment</li>
+    <li>Sharing confidential materials or client files without authorization</li>
+    <li>Misuse of company tools, platforms, or resources</li>
+    <li>Dishonesty or misrepresentation in any form</li>
+  </ul>
+  <p>Mistakes happen. Misconduct becomes a formal matter when it is repeated, intentional, or harms the team, a client, or the company's reputation.</p>
+
+  <hr class="hr">
+
+  <h3>Disciplinary process</h3>
+  <p>Any concern about conduct or performance starts with a direct conversation. The goal is resolution, not punishment.</p>
+  <p>The standard disciplinary process follows these steps:</p>
+
+  <div class="step">
+    <div class="step-h"><span class="step-n">1</span><h3>Verbal reminder</h3></div>
+    <div class="step-body">
+      <p>An informal discussion to identify and address the issue. No formal record is created at this stage, but the conversation will be noted internally.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-h"><span class="step-n">2</span><h3>Written warning (SP1)</h3></div>
+    <div class="step-body">
+      <p>A formal written notice issued if the issue persists after a verbal reminder, or if the initial infraction warrants immediate written documentation. <strong>SP1 carries no financial sanction.</strong></p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-h"><span class="step-n">3</span><h3>Final warning (SP2)</h3></div>
+    <div class="step-body">
+      <p>Issued if the behavior or performance issue continues after SP1, or if a subsequent violation occurs within the SP1 active period. SP2 carries a formal financial sanction in addition to the written warning:</p>
+      <p>As provided under these Company Regulations, and in accordance with PP No. 36/2021 Article 20, the issuance of SP2 may result in the partial or full withholding of variable allowances, meaning performance incentives and other non-fixed pay components for a defined period as determined by management. <strong>Base salary is not affected.</strong> The total deduction across all components shall not exceed <strong>50%</strong> of the employee's total monthly compensation in any given pay period.</p>
+      <p>The specific allowance components covered by this are defined in the employee's individual contract or a separate written amendment communicated at the time of SP2 issuance.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-h"><span class="step-n">4</span><h3>Termination (SP3)</h3></div>
+    <div class="step-body">
+      <p>Issued if all prior steps fail to produce the required improvement, or if the misconduct is of sufficient severity to warrant immediate termination. SP3 constitutes notice of termination of employment.</p>
+    </div>
+  </div>
+
+  <p>Each formal warning (SP1, SP2) remains active for <strong>two quarters (6 months)</strong> from the date of issuance and will be referenced in the relevant bi-annual performance review.</p>
+
+  <div class="note">
+    <p><strong>Note:</strong> The steps above represent the standard progression. Management may issue any level of warning, including SP2 or SP3 directly, based on the nature and severity of the misconduct, without following the full sequence.</p>
+  </div>
+
+  <hr class="hr">
+
+  <h3>Discretionary suspension</h3>
+  <p>In addition to the standard disciplinary process above, management may impose a suspension at its discretion at any stage, including before any SP has been issued, when circumstances require it.</p>
+  <p>Suspension is not a mandatory step in the disciplinary process. It is a separate measure available to management and may be applied independently of or alongside any SP.</p>
+
+  <p><strong>When suspension may be applied:</strong> Suspension is appropriate when the employee's continued presence in the work environment poses a risk to the team, the investigation process, client relationships, or the integrity of the workplace. This includes, but is not limited to:</p>
+  <ul>
+    <li>Credible allegations of sexual harassment or assault</li>
+    <li>Credible allegations of physical violence or threats</li>
+    <li>Serious breach of confidentiality under active investigation</li>
+    <li>Any situation where the employee's presence may compromise a fair investigation</li>
+  </ul>
+
+  <p><strong>Terms of suspension:</strong></p>
+  <ul>
+    <li>Duration is as determined by management, based on the nature and complexity of the situation</li>
+    <li>During suspension, the employee's <strong>base salary continues to be paid in full</strong>, as required under UU No. 13/2003 Article 155</li>
+    <li>Variable allowances may be withheld during the suspension, as provided under these Company Regulations</li>
+    <li>The employee will be notified in writing of the suspension, its reason, its expected duration, and the investigation process</li>
+    <li>The employee is expected to remain reachable and to cooperate fully with any investigation during the suspension period</li>
+  </ul>
+
+  <p><strong>Following the investigation:</strong> Depending on the outcome, the suspension may result in reinstatement with no further action, issuance of an appropriate SP, or termination (SP3) where warranted by the findings.</p>
+
+  <div class="note dont">
+    <span class="lab">Unpaid suspension is never used</span>
+    <p>Imposing suspension without pay, or failing to pay base salary during a suspension, constitutes a violation of Indonesian labour law and exposes the company to legal liability. Planaria Studio will not do this.</p>
+  </div>
+
+  <hr class="hr">
+
+  <h3>Reporting violations or grievances</h3>
+  <p>If you experience or witness behaviour that crosses a line, or feel you have been treated unfairly, we want to know.</p>
+  <p>Reports can be directed to <strong>Rashy Azhardwian</strong>. All reports will be handled with full confidentiality and taken seriously. For reports involving sexual harassment specifically, the matter will be treated as a priority and may trigger an immediate suspension of the accused party pending investigation.</p>
+  <p>There is no retaliation for raising a concern in good faith. We would rather deal with something directly than let it fester. Everyone here deserves a safe, respectful and fair place to work.</p>
+</section>
+
+<!-- ===== 10 ===== -->
+<section id="leaving">
+  <div class="sec-head"><span class="sec-num">10</span><h2>Leaving the company</h2></div>
+
+  <h3>Resignation procedure</h3>
+  <p>If you decide to move on, we ask for a minimum of <strong>30 days' written notice</strong>, <span class="chg">submitted by email or through GoodDay</span>.</p>
+  <p>This allows us to plan for a smooth handover for the team and our clients. During your notice period, please continue to fulfill your responsibilities and assist with the transition of your tasks.</p>
+
+  <h3>Exit interviews</h3>
+  <p>Prior to your last day, we will schedule a brief exit interview. Your chance to say candidly what worked, what did not, and where we can improve.</p>
+
+  <h3>Final paycheck &amp; benefits</h3>
+  <p>Your final paycheck will include all outstanding salary, any unused day-off entitlements subject to monetary conversion (per rollover rules in <a href="#timeoff">Section 7.1</a>), and any other owed benefits as specified in your contract.</p>
+  <p>It will be processed on the next regular pay cycle following your last working day. If you have questions about your final pay, contact management directly.</p>
+
+  <h3>Return of company property</h3>
+  <p>Please return all company property before your final day. That includes, but is not limited to, equipment, software licences, project files, and any other materials related to your work here.</p>
+  <p>If you are unsure what needs to be returned, confirm with your manager in advance of your last day.</p>
+
+  <h3>Grounds for involuntary termination</h3>
+  <p>Involuntary termination may occur as a result of:</p>
+  <ul>
+    <li>Serious or repeated misconduct</li>
+    <li>Consistent failure to meet performance expectations</li>
+    <li>Breach of confidentiality or company policy</li>
+    <li>Actions that significantly harm the team, clients, or the business</li>
+  </ul>
+  <p>Every termination is handled fairly and in compliance with Indonesian labour law. You will be told the reasons and given the chance to ask questions.</p>
+</section>
+
+<!-- ===== legal ===== -->
+<section id="legal">
+  <div class="sec-head"><span class="sec-num">11</span><h2>Legal reference</h2></div>
+
+  <p>This handbook is informed by and designed to be consistent with the following applicable Indonesian regulations:</p>
+
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>Regulation</th><th>What it covers</th></tr></thead>
+      <tbody>
+        <tr><td><strong>UU No. 13/2003</strong></td><td>Manpower Law</td></tr>
+        <tr><td><strong>UU No. 11/2020</strong></td><td>Job Creation Law, the Omnibus Law</td></tr>
+        <tr><td><strong>UU No. 6/2023</strong></td><td>Confirmation of Emergency Regulation No. 2/2022 on Job Creation</td></tr>
+        <tr><td><strong>PP No. 36/2021</strong></td><td>Wage Regulation</td></tr>
+        <tr><td><strong>Minister of Manpower Regulation No. 6/2016</strong></td><td>Religious holiday allowance for employees</td></tr>
+        <tr><td><strong>PER-16/PJ/2016</strong></td><td>Director General of Taxes Regulation, income tax withholding</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Where any provision of this handbook conflicts with applicable law, the law prevails. Where this handbook and your individual employment contract differ on matters beyond the statutory minimum, your contract prevails.</p>
+</section>
+
+<!-- ===== changes ===== -->
+<section id="changes">
+  <div class="sec-head"><span class="sec-num">12</span><h2>What changed in the move to GoodDay</h2></div>
+
+  <p>The handbook moved from ClickUp to GoodDay in September 2026. Every edit made during that move is listed here. Nothing else in the document was touched.</p>
+
+  <div class="tbl-scroll">
+    <table>
+      <thead><tr><th>Where</th><th>Used to say</th><th>Now says</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>6.2</strong> Logging attendance</td>
+          <td>Log daily through ClickUp, at Staff Hub → the attendance list → Attendance Form</td>
+          <td>Log daily through GoodDay, at Staff Hub → Attendance. Daily Standup on working days, Time Off Request otherwise</td>
+        </tr>
+        <tr>
+          <td><strong>6.2</strong> Form fields</td>
+          <td>Your Name, User, Attendance &amp; Workload Status, Date, Notes</td>
+          <td>Your name, Which job?, Other work today, What are you working on?, Blocked by anything?, Which day is this for?</td>
+        </tr>
+        <tr>
+          <td><strong>6.2</strong> Workload rating</td>
+          <td>Pick Heavy, Medium, Light, Standby or OFF each day</td>
+          <td>Removed. Load is read from the board and from what you write, not from a self-rating. OFF is now a Time Off Request</td>
+        </tr>
+        <tr>
+          <td><strong>7</strong> Requesting time off</td>
+          <td>Attendance Form with status OFF, 2 working days in advance</td>
+          <td>Time Off Request tab, 2 working days in advance. Unchanged notice period</td>
+        </tr>
+        <tr>
+          <td><strong>7.2</strong> Paid leave</td>
+          <td>Not stated</td>
+          <td>Added: only Julius can mark a request PAID LEAVE, and payroll reads that</td>
+        </tr>
+        <tr>
+          <td><strong>7.3</strong> Sick leave</td>
+          <td>Notify your lead, documentation as required</td>
+          <td>Same, plus where to file it: Time Off Request, kind Sick, same morning, note attached</td>
+        </tr>
+        <tr>
+          <td><strong>7.1</strong> Days off <em>(policy, not platform)</em></td>
+          <td>8 days a month, all of them requested</td>
+          <td>Sunday fixed and automatic, counting against the 8. Ceiling of 9 in any month</td>
+        </tr>
+        <tr>
+          <td><strong>10</strong> Resignation</td>
+          <td>Submitted via email or through ClickUp</td>
+          <td>Submitted by email or through GoodDay</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note do">
+    <span class="lab">What did not change</span>
+    <p>Pay, the 25th cut-off, the size of the monthly allowance, the N+2 rollover, annual leave, the holiday allowance, standby hours, notice periods, SP1 to SP3, suspension, and every legal reference are exactly as they were. Only how days off are taken has changed.</p>
+  </div>
+</section>
+
+<hr class="hr">
+
+<footer>
+  <p>This is a living document. It will be updated as Planaria Studio grows, regulations change, and our operations evolve. <strong>Version: September 2026.</strong> For any questions not covered here, speak to management directly.</p>
+  <p>Where this handbook and your individual employment contract differ, your contract prevails.</p>
+</footer>
+
+</main>
+</div>
+<script>window.__GUIDE_NAV__ = [];</script>
+<script>
+// Adds the cross-links into the guide's own top bar. Keeps the guide files themselves
+// untouched, so the same file can be published as an artifact or to the web.
+(function () {
+  var bar = document.querySelector('.topbar-in');
+  if (!bar) return;
+  var chip = bar.querySelector('.aud');
+  var wrap = document.createElement('span');
+  wrap.style.cssText = 'display:flex;gap:14px;align-items:center;margin-left:18px;font-size:13px';
+  var links = window.__GUIDE_NAV__ || [];
+  links.forEach(function (l) {
+    var a = document.createElement('a');
+    a.href = l.href;
+    a.textContent = l.label;
+    a.style.cssText = 'color:var(--muted);text-decoration:none;white-space:nowrap';
+    a.onmouseover = function () { a.style.color = 'var(--ink)'; };
+    a.onmouseout  = function () { a.style.color = 'var(--muted)'; };
+    wrap.appendChild(a);
+  });
+  if (chip) bar.insertBefore(wrap, chip); else bar.appendChild(wrap);
+})();
+</script>
+</body>
+</html>
